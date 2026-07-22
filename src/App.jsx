@@ -4,9 +4,9 @@ import { Main } from "./components/Main";
 import { Search } from "./components/Search";
 import { Typography } from "./components/Typography";
 import { DailyBudget } from "./components/DailyBudget";
+import { SavingStatus } from "./components/SavingsStatus";
 
 import Card from "./components/Card";
-
 
 function App() {
   return (
@@ -23,7 +23,13 @@ function App() {
         <Card>
           <Card.Header>Orçamento diário disponível:</Card.Header>
           <Card.Body>
-            <DailyBudget value={200}/>
+            <DailyBudget value={200} />
+          </Card.Body>
+        </Card>
+        <Card>
+          <Card.Header>Progresso da meta financeira</Card.Header>
+          <Card.Body>
+            <SavingStatus percent={40}/>
           </Card.Body>
         </Card>
       </Main>
